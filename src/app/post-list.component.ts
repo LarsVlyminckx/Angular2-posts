@@ -1,5 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Comment } from './comment';
 
+import { PostService } from './post.service';
 @Component({
    selector: 'post-list',
    templateUrl: './post-list.component.html'
