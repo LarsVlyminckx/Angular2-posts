@@ -1,11 +1,11 @@
 "use strict";
 var Post = (function () {
-    function Post(index, name) {
-        this.index = index;
-        this.name = name;
+    function Post(title, body) {
+        this.title = title;
+        this.body = body;
     }
     Post.prototype.toForm = function () {
-        return "index=" + this.index + "&name=" + this.name;
+        return "title=" + this.title + "&body=" + this.body;
     };
     return Post;
 }());

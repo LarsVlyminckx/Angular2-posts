@@ -8,20 +8,20 @@ import { Post } from './post';
 @Injectable()
 export class PostService {
 
-  private productsServiceURI: string = 'http://localhost:4000';
+  private postsServiceURI: string = 'http://localhost:4000';
 
    constructor(private http: HttpClient) {}
 
    // get all posts
    getAllPosts(): Observable<Post[]> {
-   let url = `${this.productsServiceURI}/list`;
+   let url = `${this.postsServiceURI}/list`;
 
-      return this.http.get<Product[]>(url);
+      return this.http.get<Post[]>(url);
  }
 
    // get comments based on the index
    getCommentsForPost(index: number): Observable<Comment[]> {
-   let url = `${this.productsServiceURI}/search`;
+   let url = `${this.postsServiceURI}/search`;
 
       return this.http.post(url, `index=${index}`,
                     {headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')});

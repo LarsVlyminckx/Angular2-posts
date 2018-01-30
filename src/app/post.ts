@@ -1,8 +1,8 @@
 export class Post {
 
-   constructor (public index: number, public name: string) {}
+   constructor (public title: string, public body: string) {}
 
    toForm(): string {
-      return `index=${this.index}&name=${this.name}`;
+      return `title=${this.title}&body=${this.body}`;
    }
 }

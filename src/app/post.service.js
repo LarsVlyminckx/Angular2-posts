@@ -13,16 +13,16 @@ var http_1 = require("@angular/common/http");
 var PostService = (function () {
     function PostService(http) {
         this.http = http;
-        this.productsServiceURI = 'http://localhost:4000';
+        this.postsServiceURI = 'http://localhost:4000';
     }
     // get all posts
     PostService.prototype.getAllPosts = function () {
-        var url = this.productsServiceURI + "/list";
+        var url = this.postsServiceURI + "/list";
         return this.http.get(url);
     };
     // get comments based on the index
     PostService.prototype.getCommentsForPost = function (index) {
-        var url = this.productsServiceURI + "/search";
+        var url = this.postsServiceURI + "/search";
         return this.http.post(url, "index=" + index, { headers: new http_1.HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded') });
     };
     return PostService;

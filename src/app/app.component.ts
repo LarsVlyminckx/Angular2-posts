@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Post } from './post';
+import { Comment } from './comment';
 
 @Component({
    selector: 'my-app',
@@ -11,7 +11,7 @@ export class AppComponent  {
 
  constructor() {}
 
- handlecommentsFound(data: Post[]): void {
+ handlecommentsFound(data: Comment[]): void {
       for (var i = 0; i < data.length; i++) {
          console.log(data[i].name);
       }
